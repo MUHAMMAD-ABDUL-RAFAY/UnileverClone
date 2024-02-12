@@ -127,8 +127,9 @@ const Navbar = () => {
           id="disable-close-on-select"
           disableCloseOnSelect
           renderInput={(params) => (
-            <TextField sx={{input: {color:'white'},'&::placeholder': {color: 'white'}}} {...params} style={{color:"white"}} label="Search" variant="standard" />
+            <TextField sx={{input: {color:'#CFC8BD'},'&::placeholder': {color: '#CFC8BD'}}} style={{borderBottom:"1px solid #CFC8BD"}} {...params}  label="Search" variant="standard" />
           )}
+          // style={{color:"#CFC8BD",backgroundColor:""}}
       />
       </div>
       <PagesNav />
