@@ -1,11 +1,17 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import MailIcon from '@mui/icons-material/Mail';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import { Typography } from '@mui/material';
 const TextPage = () => {
-  return (
+    const isSmallDevice = window.innerWidth < 480;
+    const isMediumDevice = window.innerWidth >= 480 && window.innerWidth < 768;
+    useEffect(() => {
+        console.log(isSmallDevice,isMediumDevice)
+    },[isSmallDevice,isMediumDevice])
+    return (
+
     <div className='mt-8 mb-16'>
-        <div className='flex flex-col mb-4' style={{width:'90%',justifyContent:"flex-end"}}>
+        { isSmallDevice || isMediumDevice ? "" : <div className='flex flex-col mb-4' style={{width:'90%',justifyContent:"flex-end"}}>
             <div className='flex flex-col' style={{alignSelf:"flex-end",color:"#CFC8BD"}}>
                 Share this page
                 <div className='flex flex-row gap-x-2 mt-2'>
@@ -23,8 +29,8 @@ const TextPage = () => {
                     </div>
                 </div>
             </div>
-        </div>
-        <div className='flex flex-col' style={{width:"60%",justifyContent:"flex-start",marginLeft:"10%"}}>
+        </div>}
+        <div className='flex flex-col' style={{width: isSmallDevice || isMediumDevice ? "80%" :"60%",justifyContent:"flex-start",marginLeft:"10%"}}>
             <Typography style={{fontSize:"25px",color:"#CFC8BD"}}>We believe in the power of food to enhance quality of life.</Typography>
             <br />
             <br />

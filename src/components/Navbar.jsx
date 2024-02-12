@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import PagesNav from "./PagesNav";
+import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import {
   Typography,
   Switch,
@@ -13,6 +14,13 @@ import LanguageIcon from "@mui/icons-material/Language";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import logo from "../assets/logo.svg";
 const Navbar = () => {
+  const isSmallDevice = window.innerWidth < 480;
+  const isMediumDevice = window.innerWidth >= 480 && window.innerWidth < 768;
+  useEffect(() => {
+    console.log(isSmallDevice,isMediumDevice)
+  },[isSmallDevice,isMediumDevice])
+
+  
   const IOSSwitch = styled((props) => (
     <Switch
       focusVisibleClassName=".Mui-focusVisible"
@@ -71,7 +79,7 @@ const Navbar = () => {
 
   const [color, setColor] = useState("");
   const searchSugesstions = ["Careers", "Brands", "Sustainability at Nestle"];
-  const searchTitle = ["Suggested Pages"];
+  // const searchTitle = ["Suggested Pages"];
   const defaultProps = {
     options: searchSugesstions,
   };
@@ -81,9 +89,9 @@ const Navbar = () => {
   };
   return (
     <div className="flex flex-col">
-      <div className="flex flex-row items-center mr-8" style={{placeContent:'flex-end'}}>
-        <div className="flex">
-          <Typography className="mr-1" style={{ fontSize: "1em", color:"#B5AEA2"}} >Dark mode</Typography>
+      <div className="flex flex-row items-center md:mr-8 lg:mr-8" style={{placeContent:'flex-end'}}>
+        <div className={isSmallDevice ? "flex items-center" : "flex"}>
+          <Typography className={isSmallDevice ? "" :"mr-1"} style={{ fontSize: "1em", color:"#B5AEA2"}} >Dark mode</Typography>
           <InfoIcon
             style={{ cursor: "pointer", color: color }}
             onMouseEnter={() => handleHover(true)}
@@ -106,7 +114,7 @@ const Navbar = () => {
               }}
               style={{ color: "#aca496" }}
             />
-            You are in our Global Site <KeyboardArrowDownIcon />{" "}
+            {isMediumDevice || isSmallDevice ? " " : "You are in our Global Site"} <KeyboardArrowDownIcon />{" "}
           </Button>
           <Button
             style={{
@@ -115,7 +123,7 @@ const Navbar = () => {
               fontSize: "0.7rem",
             }}
           >
-            Contact us
+            {isMediumDevice || isSmallDevice ? <MailOutlineIcon /> : "Contact Us"}
           </Button>
         </div>
       </div>
@@ -132,7 +140,7 @@ const Navbar = () => {
           // style={{color:"#CFC8BD",backgroundColor:""}}
       />
       </div>
-      <PagesNav />
+      {/* <PagesNav /> */}
     </div>
 
 
