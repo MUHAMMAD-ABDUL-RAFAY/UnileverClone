@@ -122,12 +122,12 @@ const Navbar = () => {
 
       <div className="flex items-center justify-evenly mt-8 mx-8">
         <img src={logo} alt="logo" style={{ maxWidth: "363px" }} />
-        <Autocomplete style={{width:"30%"}}
+        <Autocomplete style={{width:"30%",outline:"none",border:"none",color:"#CFC8BD"}}
           {...defaultProps}
           id="disable-close-on-select"
           disableCloseOnSelect
           renderInput={(params) => (
-            <TextField sx={{input: {color:'#CFC8BD'},'&::placeholder': {color: '#CFC8BD'}}} style={{borderBottom:"1px solid #CFC8BD"}} {...params}  label="Search" variant="standard" />
+            <TextField sx={{input: {color:'#CFC8BD',outline:"none",border:"none"},'&::placeholder': {color: '#CFC8BD'}}} style={{borderBottom:"1px solid #CFC8BD"}} {...params}  label="Search" variant="standard" />
           )}
           // style={{color:"#CFC8BD",backgroundColor:""}}
       />
