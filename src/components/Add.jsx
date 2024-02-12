@@ -4,10 +4,9 @@ import React, { useEffect } from "react";
 const Add = () => {
   const isSmallDevice = window.innerWidth < 480;
   const isMediumDevice = window.innerWidth >= 480 && window.innerWidth < 768;
-  const isLargeDevice = window.innerWidth >= 768 && window.innerWidth < 1024;
   useEffect(() => {
-    console.log(isSmallDevice, isMediumDevice, isLargeDevice);
-  }, [isSmallDevice, isMediumDevice, isLargeDevice]);
+    console.log(isSmallDevice, isMediumDevice);
+  }, [isSmallDevice, isMediumDevice]);
 
   return (
     <div
