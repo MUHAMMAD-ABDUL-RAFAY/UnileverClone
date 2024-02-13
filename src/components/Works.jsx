@@ -56,7 +56,8 @@ const Works = () => {
       </Typography>
       <div className="grid mt-8" style={{gridTemplateColumns:"repeat(auto-fit,minmax(290px,1fr))",gridGap:"1.25rem"}}>
         {Object.keys(cardHeadings).map((heading) => (
-          <Card key={heading} className="flex flex-col">
+          // no color,backgroundcolor for card in dark mode
+          <Card key={heading} className="flex flex-col" style={{backgroundColor:"#efefef",color:"#000",borderRadius:"1rem"}}>
             <Card.Img
               style={{
                 borderTopRightRadius: "1rem",
@@ -67,11 +68,12 @@ const Works = () => {
             />
             <Card.Body
               style={{
-                border: "1px solid #FFF",
+                // #FFF for border in dark mode
+                border: "1px solid #D4D4D4",
                 padding: "2rem 1rem 2rem 1rem",
                 borderBottomLeftRadius: "1rem",
                 borderBottomRightRadius: "1rem",
-                height:"330px"
+                height:"350px"
               }}
             >
               <Card.Title
@@ -87,10 +89,11 @@ const Works = () => {
                 {cardHeadings[heading][1]}
               </Card.Text>
               <div className="flex items-center mt-4">
-                <Button style={{color:"#4F97B8"}} >READ MORE </Button>
-                <ArrowForwardIcon
-                  style={{ fontSize: "20px", color: "#4F97B8" }}
-                />
+                {/* button color #4f97b8 , no backgroundColor in dark mode*/}
+                {/* color for ArrowIcon #4f97b8 */}
+                <Button style={{color:"#fff",backgroundColor:"#CC2439"}} >READ MORE <ArrowForwardIcon
+                  style={{ fontSize: "20px", color: "#fff" }}
+                /> </Button>
               </div>
             </Card.Body>
           </Card>

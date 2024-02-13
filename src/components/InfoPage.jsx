@@ -21,7 +21,8 @@ const InfoPage = () => {
         <StatsDiv headingText={"30.2%"} sign={""} bottomText={"of our top 200+ senior executive positions are held by women (up from 25.6% in 2020 and achieving our target)"} />
       </div>
       <div style={{ width: (isSmallDevice || isMediumDevice) ? "85%" : "50%",marginRight: (isSmallDevice || isMediumDevice) ? "" : "10%" }}>
-        <Card style={{ backgroundColor: "#17668C", borderRadius: "1rem" }}>
+        {/* #17668C backgroundColor for card body in dark mode */}
+        <Card style={{ backgroundColor: "#EFEFEF", borderRadius: "1rem" }}>
           <Card.Img
             style={{
               borderTopRightRadius: "1rem",
@@ -30,7 +31,8 @@ const InfoPage = () => {
             variant="top"
             src="/cardImage.jpg"
           />
-          <Card.Body style={{ padding: "1rem 1.5rem 2rem 1.5rem" }}>
+          
+          <Card.Body style={{ padding: "1rem 1.5rem 2rem 1.5rem"}}>
             <Card.Title
               style={{
                 fontSize: "1.6875rem",
