@@ -21,7 +21,7 @@ const Footer = () => {
       >
         <a style={{ marginBottom: isMediumDevice || isSmallDevice ? "0.2rem" : "" }}>
           {" "}
-          <CopyrightIcon sx={{ fontSize: "15px" }} /> 2023 Nestle
+          <CopyrightIcon sx={{ fontSize: "15px" }} /> 2023 Colgate
         </a>
         {isSmallDevice || isMediumDevice ? <hr /> : "|"}
         <a style={{ marginBottom: isMediumDevice || isSmallDevice ? "0.2rem" : "" }}>Site map</a>

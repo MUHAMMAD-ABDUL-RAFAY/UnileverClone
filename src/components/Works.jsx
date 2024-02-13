@@ -19,7 +19,7 @@ const Works = () => {
     ],
     "Water stewardship": [
       "/watercanalCard.jpg",
-      "Nestle aims to reduce water use in our factories by 6 miilion m3 between 2021 and 2023.",
+      "Colgate aims to reduce water use in our factories by 6 miilion m3 between 2021 and 2023.",
     ],
     "Human rights": [
       "/humanrightsCard.jpg",
@@ -39,7 +39,7 @@ const Works = () => {
     ],
     "Performance and reporting": [
       "/reportingcenterfarmCard.jpg",
-      "Transparent, public reporting on our activities, commitments and performance is embedded in how we do business at Nestle.",
+      "Transparent, public reporting on our activities, commitments and performance is embedded in how we do business at Colgate.",
     ],
   };
   return (
@@ -52,7 +52,7 @@ const Works = () => {
       }}
     >
       <Typography style={{ fontSize: "1.55rem", fontWeight: "200" }}>
-        Sustainability through Nestle
+        Sustainability through Colgate
       </Typography>
       <div className="grid mt-8" style={{gridTemplateColumns:"repeat(auto-fit,minmax(290px,1fr))",gridGap:"1.25rem"}}>
         {Object.keys(cardHeadings).map((heading) => (

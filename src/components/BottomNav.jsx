@@ -10,8 +10,8 @@ const BottomNav = () => {
   return (
     <div className={`flex ${(isSmallDevice || isMediumDevice) ? "flex-col gap-y-12" :"flex-row"} ${(isSmallDevice || isMediumDevice) ? "flex-start" :"items-center"} justify-evenly px-8 py-12`} style={{ backgroundColor: "#17668C"}}>
       <div className={`flex flex-col gap-y-4`}>
-        <Typography style={{fontSize:"22px",lineHeight:"19px",color:"#E5E0D8"}} >Nestle News</Typography>
-        <Typography style={{color:"#E5E0D8"}} >Sign up for Global Nestle <br />News</Typography>
+        <Typography style={{fontSize:"22px",lineHeight:"19px",color:"#E5E0D8"}} >Colgate News</Typography>
+        <Typography style={{color:"#E5E0D8"}} >Sign up for Global Colgate <br />News</Typography>
         <Button style={{color:"#17668C",backgroundColor:"#E5E0D8"}}>Sign up</Button>
       </div>
       <div className="flex flex-col gap-y-4">

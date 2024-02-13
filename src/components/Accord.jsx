@@ -43,7 +43,7 @@ const Accord = () => {
           aria-controls="panel1-content"
           id="panel1-header"
         >
-          <Typography style={{ color: "#CFC8BD" }}>OTHER NESTLE BUSINESSES</Typography>
+          <Typography style={{ color: "#CFC8BD" }}>OTHER COLGATE BUSINESSES</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>

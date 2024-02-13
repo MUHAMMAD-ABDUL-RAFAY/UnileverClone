@@ -78,7 +78,7 @@ const Navbar = () => {
   }));
 
   const [color, setColor] = useState("");
-  const searchSugesstions = ["Careers", "Brands", "Sustainability at Nestle"];
+  const searchSugesstions = ["Careers", "Brands", "Sustainability at Colgate"];
   // const searchTitle = ["Suggested Pages"];
   const defaultProps = {
     options: searchSugesstions,

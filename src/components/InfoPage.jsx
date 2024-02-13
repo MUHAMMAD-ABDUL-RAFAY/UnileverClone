@@ -54,7 +54,7 @@ const InfoPage = () => {
                 color: "#000",
               }}
             >
-              At Nestle, we are making it our business to advance regenerative
+              At Colgate, we are making it our business to advance regenerative
               food systems at scale - our own resilience and success depend on
               it. We are playing our part in developing global food systems that
               put people first and contribute to the resilience and well-being
