@@ -8,25 +8,30 @@ const PagesNav = () => {
 
     return (
     <>
-        <div className='mt-8 flex p-3 place-content-evenly' style={{backgroundColor:"#343331"}}>
+        {/* backgroundColor: 343331 for dark mode */}
+        <div className='mt-8 flex p-3 place-content-evenly' style={{backgroundColor:"#CC0000"}}>
             <div className='flex gap-x-4 items-center'>
-                <HomeOutlinedIcon className='mr-4' style={{color:"#CFC8BD"}} sx={{fontSize:30}} />
+                {/* color #CFC8BD in dark mode */}
+                <HomeOutlinedIcon className='mr-4' style={{color:"#fff"}} sx={{fontSize:30}} />
                 {
                     rightSidePages.map((page,index) => (
-                    <a key={index} style={{color:"#CFC8BD",cursor:"pointer"}} >{page}</a>
+                        // #CFC8BD in dark mode
+                    <a key={index} style={{color:"#fff",cursor:"pointer"}} >{page}</a>
                     ))
                 }
             </div>
             <div className='flex gap-x-4 items-center'>
                 {leftSidePages.map((page,index) => (
-                    <a key={index} className='font-bold' style={{color:"#CFC8BD",cursor:"pointer" }} >{page}</a>
+                    // #CFC8BD in dark mode
+                    <a key={index} className='font-bold' style={{color:"#fff",cursor:"pointer" }} >{page}</a>
                 ))}
             </div>
         </div>
         <div className='flex mt-4' style={{marginLeft:"3%"}}>
-            <Typography style={{fontSize:'0.8rem',color:"#CFC8BD"}}>Home</Typography>
+            {/* color #CFC8BD */}
+            <Typography style={{fontSize:'0.8rem',color:"#000"}}>Home</Typography>
             <ChevronRightOutlinedIcon sx={{fontSize:20}} />
-            <Typography style={{fontSize:'0.8rem',color:"#CFC8BD",textDecoration:'underline',textDecorationColor:"#00807A"}}>Sustainability at Colgate</Typography>
+            <Typography style={{fontSize:'0.8rem',color:"#000",textDecoration:'underline',textDecorationColor:"#CC0000"}}>Sustainability at Colgate</Typography>
         </div>
     </>
   )

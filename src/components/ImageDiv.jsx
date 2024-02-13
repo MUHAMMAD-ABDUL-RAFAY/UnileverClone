@@ -14,7 +14,7 @@ const ImageDiv = () => {
     <div className='relative mt-4'>
         <img src="familyImage.jpg" alt="Your image" style={{
             boxShadow: 'inset 0 0 10px 5px rgba(0, 0, 0, 0.5)'}} />
-        <p className="absolute" style={{top:"50%",left:"50%",transform:"translate(-50%,-50%)",color:"#E5E0D8",fontSize:"4rem"}}>Sustainability at Colgate</p>
+        <p className="absolute text-center" style={{top:"50%",left:"50%",transform:"translate(-50%,-50%)",color:"#E5E0D8",fontSize:"4rem"}}>Sustainability at Colgate</p>
     </div>
 // .image-text {
 //   position: absolute;
