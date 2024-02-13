@@ -2,46 +2,15 @@ import { Button, Typography } from "@mui/material";
 import React from "react";
 import { Card } from "react-bootstrap";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-
-const Works = () => {
-  const cardHeadings = {
-    "Climate action": [
-      "/climateAction.jpg",
-      "We have put peak carbon behind us and aim to halve greenhouse gas emissions by 2030.",
-    ],
-    "Waste Reduction": [
-      "/wasteCardwithBg.png",
-      "Our ambition is a future where none of our packaging ends up in landfill or as litter.",
-    ],
-    "Protecting Nature": [
-      "/natureCard.jpg",
-      "We remain focused on achieving and maintaining 100% deforestation-free primary supply chains for meat, palm oil, pulp and paper, soy and sugar, and aim to do so by 2025 for coffee and cocoa.",
-    ],
-    "Water stewardship": [
-      "/watercanalCard.jpg",
-      "Colgate aims to reduce water use in our factories by 6 miilion m3 between 2021 and 2023.",
-    ],
-    "Human rights": [
-      "/humanrightsCard.jpg",
-      "We have published action plans for each of the salient issues in our Human Rights Framework and Roadmap and aim to report our progress against them by 2025.",
-    ],
-    "Sustainably sourced raw materials": [
-      "/rawmaterialsCard.jpg",
-      "We aim for 100% of our key ingredients to be produced sustainable by 2030.",
-    ],
-    "Taking care of people and communities": [
-      "/communityCard.jpg",
-      "We respect and encourage all our employees and value their potential. At the same time, we are working to boost the well-being of communities and enable a just transition to regenerative practices.",
-    ],
-    "Ethical and responsible business practices": [
-      "/businessforestroadCard.jpg",
-      "We continue working to generate trust as an ethical and sustainable business: to inspire industry and collaborate with our peers to make changes that help in the transition toward regenrative food systems.",
-    ],
-    "Performance and reporting": [
-      "/reportingcenterfarmCard.jpg",
-      "Transparent, public reporting on our activities, commitments and performance is embedded in how we do business at Colgate.",
-    ],
-  };
+import {useNavigate} from "react-router-dom";
+const Works = ({pageHeading,cardHeadings}) => {
+  
+  const navigate = useNavigate();
+  const redirectToPage = (page) => {
+    console.log(page)
+    window.scrollTo(0,0);
+    navigate("/climateaction",{replace:true});
+  }
   return (
     <div
       style={{
@@ -52,7 +21,7 @@ const Works = () => {
       }}
     >
       <Typography style={{ fontSize: "1.55rem", fontWeight: "200" }}>
-        Sustainability through Colgate
+        {pageHeading}
       </Typography>
       <div className="grid mt-8" style={{gridTemplateColumns:"repeat(auto-fit,minmax(290px,1fr))",gridGap:"1.25rem"}}>
         {Object.keys(cardHeadings).map((heading) => (
@@ -91,7 +60,7 @@ const Works = () => {
               <div className="flex items-center mt-4">
                 {/* button color #4f97b8 , no backgroundColor in dark mode*/}
                 {/* color for ArrowIcon #4f97b8 */}
-                <Button style={{color:"#fff",backgroundColor:"#CC2439"}} >READ MORE <ArrowForwardIcon
+                <Button style={{color:"#fff",backgroundColor:"#CC2439"}} onClick={() => redirectToPage(cardHeadings[heading][2])} >READ MORE <ArrowForwardIcon
                   style={{ fontSize: "20px", color: "#fff" }}
                 /> </Button>
               </div>
@@ -104,3 +73,54 @@ const Works = () => {
 };
 
 export default Works;
+
+
+
+
+// const cardHeadings = {
+  //   "Climate action": [
+  //     "/climateAction.jpg",
+  //     "We have put peak carbon behind us and aim to halve greenhouse gas emissions by 2030.",
+  //     "/climateaction"
+  //   ],
+  //   "Waste Reduction": [
+  //     "/wasteCardwithBg.png",
+  //     "Our ambition is a future where none of our packaging ends up in landfill or as litter.",
+  //     "/wastereduction"
+  //   ],
+  //   "Protecting Nature": [
+  //     "/natureCard.jpg",
+  //     "We remain focused on achieving and maintaining 100% deforestation-free primary supply chains for meat, palm oil, pulp and paper, soy and sugar, and aim to do so by 2025 for coffee and cocoa.",
+  //     "/nature"
+  //   ],
+  //   "Water stewardship": [
+  //     "/watercanalCard.jpg",
+  //     "Colgate aims to reduce water use in our factories by 6 miilion m3 between 2021 and 2023.",
+  //     "/watercanal"
+  //   ],
+  //   "Human rights": [
+  //     "/humanrightsCard.jpg",
+  //     "We have published action plans for each of the salient issues in our Human Rights Framework and Roadmap and aim to report our progress against them by 2025.",
+  //     "/humanrights"
+  //   ],
+  //   "Sustainably sourced raw materials": [
+  //     "/rawmaterialsCard.jpg",
+  //     "We aim for 100% of our key ingredients to be produced sustainable by 2030.",
+  //     "/rawmaterials"
+  //   ],
+  //   "Taking care of people and communities": [
+  //     "/communityCard.jpg",
+  //     "We respect and encourage all our employees and value their potential. At the same time, we are working to boost the well-being of communities and enable a just transition to regenerative practices.",
+  //     "/community"
+  //   ],
+  //   "Ethical and responsible business practices": [
+  //     "/businessforestroadCard.jpg",
+  //     "We continue working to generate trust as an ethical and sustainable business: to inspire industry and collaborate with our peers to make changes that help in the transition toward regenrative food systems.",
+  //     "/businessforestroad"
+  //   ],
+  //   "Performance and reporting": [
+  //     "/reportingcenterfarmCard.jpg",
+  //     "Transparent, public reporting on our activities, commitments and performance is embedded in how we do business at Colgate.",
+  //     "/reportingcenterfarm"
+  //   ],
+  // };

@@ -5,7 +5,7 @@ import ChevronRightOutlinedIcon from '@mui/icons-material/ChevronRightOutlined';
 const PagesNav = () => {
   const rightSidePages = ["About us","Our stories","Brands","Sustainability","Nutrition","Ask Colgate"]
   const leftSidePages = ["Careers","Investors","Media"]
-
+  const ExtraText = {"/":"Sustainablity at Colgate","/climateaction":"Climate action","/wastereduction":"Waste reduction","/nature":"Protecting nature","/watercanal":"Water stewardship","/humanrights":"Human rights","/rawmaterials":"Sustainably sourced raw materials","/community":"Caring about our people and communinities","/businessforestroad":"Ethical and responsible business practices","/reportingcenterfarm":"Performance and reporting"}
     return (
     <>
         {/* backgroundColor: 343331 for dark mode */}
@@ -32,6 +32,13 @@ const PagesNav = () => {
             <Typography style={{fontSize:'0.8rem',color:"#000"}}>Home</Typography>
             <ChevronRightOutlinedIcon sx={{fontSize:20}} />
             <Typography style={{fontSize:'0.8rem',color:"#000",textDecoration:'underline',textDecorationColor:"#CC0000"}}>Sustainability at Colgate</Typography>
+            {
+                window.location.pathname === "/" ? "" :
+                <>
+                <ChevronRightOutlinedIcon sx={{fontSize:20}} />
+                <Typography style={{fontSize:'0.8rem',color:"#000",textDecoration:'underline',textDecorationColor:"#CC0000"}}>{ExtraText[window.location.pathname]}</Typography>
+                </>
+            }
         </div>
     </>
   )

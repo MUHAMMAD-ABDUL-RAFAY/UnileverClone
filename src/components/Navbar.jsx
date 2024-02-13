@@ -15,13 +15,16 @@ import InfoIcon from "@mui/icons-material/Info";
 import LanguageIcon from "@mui/icons-material/Language";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import logo from "../assets/logo.svg";
+// import { useNavigate } from "react-router-dom";
 const Navbar = () => {
   const isSmallDevice = window.innerWidth < 480;
   const isMediumDevice = window.innerWidth >= 480 && window.innerWidth < 768;
   useEffect(() => {
     console.log(isSmallDevice,isMediumDevice)
   },[isSmallDevice,isMediumDevice])
-
+  console.log(window.location.search)
+  // const location = useNavigate();
+  // console.log(location.pathname,location.search)
   
   const IOSSwitch = styled((props) => (
     <Switch

@@ -1,7 +1,7 @@
 import { Typography } from '@mui/material'
 import React from 'react'
 
-const ImageDiv = () => {
+const ImageDiv = ({image}) => {
   return (
     // <div className = "relative mt-4">
     //     <div className = "w-full h-full">
@@ -12,8 +12,8 @@ const ImageDiv = () => {
     //       {/* </div> */}
     //   </div>
     <div className='relative mt-4'>
-        <img src="mainpagePic.jpg" alt="Your image" style={{
-            boxShadow: 'inset 0 0 10px 5px rgba(0, 0, 0, 0.5)'}} />
+        <img src={image} alt="Your image" style={{
+            boxShadow: 'inset 0 0 10px 5px rgba(0, 0, 0, 0.5)', width:'-webkit-fill-available',height:"400px"}} />
         {/* <p className="absolute text-center" style={{top:"50%",left:"50%",transform:"translate(-50%,-50%)",color:"#E5E0D8",fontSize:"4rem"}}>Sustainability at Colgate</p> */}
     </div>
 // .image-text {
