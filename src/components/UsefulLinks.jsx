@@ -20,7 +20,8 @@ const UsefulLinks = () => {
             We unlock the power of food to enhance quality of life for everyone,
             today and for generations to come
           </Typography>
-          <img className="mt-12" src="/nestlelogo.svg" width="120px" height="85px" style={{color:"#CFC18E"}} alt="Colgate Logo" />          
+          {/* /nestlelogo.svg */}
+          <img className="mt-12" src="https://colgate.com.pk/wp-content/uploads/2019/11/colgate-logo-desktop.png" width="120px" height="85px" style={{color:"#CFC18E"}} alt="Colgate Logo" />          
         </div>
       </div>
       <div style={{ width: (isSmallDevice || isMediumDevice) ? "85%" : "50%" }}>

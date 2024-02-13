@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import PagesNav from "./PagesNav";
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
+import SearchIcon from '@mui/icons-material/Search';
+import MenuIcon from '@mui/icons-material/Menu';
 import {
   Typography,
   Switch,
@@ -128,9 +130,16 @@ const Navbar = () => {
         </div>
       </div> */}
 
-      <div className="flex items-center justify-evenly mt-8 mx-8">
-        <img src={logo} alt="logo" style={{ maxWidth: "363px" }} />
-        <Autocomplete style={{width:"30%",outline:"none",border:"none",color:"#CFC8BD"}}
+      <div className="flex items-center justify-between mt-8 mx-8">
+        <img src={"https://colgate.com.pk/wp-content/uploads/2019/11/colgate-logo-desktop.png"} alt="logo" style={{ maxWidth: "363px" }} />
+        {(isSmallDevice || isMediumDevice) ? 
+          <div className="flex justify-between">
+            <SearchIcon sx={{fontSize:"40px"}} style={{marginRight:"0.25rem"}} /> 
+            <MenuIcon sx={{fontSize:"40px"}} />
+          </div>
+            
+          : 
+          <Autocomplete style={{width:"30%",outline:"none",border:"none",color:"#CFC8BD"}}
           {...defaultProps}
           id="disable-close-on-select"
           disableCloseOnSelect
@@ -138,9 +147,9 @@ const Navbar = () => {
             <TextField sx={{input: {color:'#CFC8BD',outline:"none",border:"none"},'&::placeholder': {color: '#CFC8BD'}}} style={{borderBottom:"1px solid #CFC8BD"}} {...params}  label="Search" variant="standard" />
           )}
           // style={{color:"#CFC8BD",backgroundColor:""}}
-      />
+      />}
       </div>
-      {/* <PagesNav /> */}
+      { (isSmallDevice || isMediumDevice) ? "" : <PagesNav />}
     </div>
 
 
