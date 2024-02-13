@@ -1,6 +1,6 @@
 import React,{useEffect} from "react";
 import { Card } from "react-bootstrap";
-import { Button } from "react-bootstrap";
+import { Button } from "@mui/material";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import StatsDiv from "./StatsDiv";
 const InfoPage = () => {
@@ -22,7 +22,8 @@ const InfoPage = () => {
       </div>
       <div style={{ width: (isSmallDevice || isMediumDevice) ? "85%" : "50%",marginRight: (isSmallDevice || isMediumDevice) ? "" : "10%" }}>
         {/* #17668C backgroundColor for card body in dark mode */}
-        <Card style={{ backgroundColor: "#EFEFEF", borderRadius: "1rem" }}>
+        {/* no border color in dark */}
+        <Card style={{ backgroundColor: "#EFEFEF", borderRadius: "1rem", borderColor:"" }}>
           <Card.Img
             style={{
               borderTopRightRadius: "1rem",
@@ -31,14 +32,16 @@ const InfoPage = () => {
             variant="top"
             src="/cardImage.jpg"
           />
-          
-          <Card.Body style={{ padding: "1rem 1.5rem 2rem 1.5rem"}}>
+          {/* no border,borderRadius,left,right radius in dark mode */}
+          <Card.Body style={{ padding: "1rem 1.5rem 2rem 1.5rem",border:"1px solid #D4D4D4",borderBottomLeftRadius: "1rem",
+                borderBottomRightRadius: "1rem"}}>
             <Card.Title
               style={{
                 fontSize: "1.6875rem",
                 fontWeight: "400",
                 marginBottom: "16px",
-                color: "#E8E5E2",
+                // #E8E5E2 in dark mode
+                color: "#000",
               }}
             >
               Our approach
@@ -47,7 +50,8 @@ const InfoPage = () => {
               style={{
                 fontSize: "1.1rem",
                 marginBottom: "24px",
-                color: "#E8E5E2",
+                // #E8E5E2 in dark mode
+                color: "#000",
               }}
             >
               At Nestle, we are making it our business to advance regenerative
@@ -63,14 +67,19 @@ const InfoPage = () => {
                 style={{
                   fontSize: "15px",
                   marginLeft: "5px",
-                  color: "#E8E5E2",
+                  // #E8E5E2 in dark mode
+                  color: "#fff",
+                  // no background color in dark mode
+                  backgroundColor: "#CC2439"
                 }}
               >
                 READ MORE
-              </Button>
-              <ArrowForwardIcon
-                style={{ fontSize: "20px", color: "#E8E5E2" }}
+                {/* Arrow Icon Color #E8E5E2 */}
+                <ArrowForwardIcon
+                style={{ fontSize: "20px", color: "#fff" }}
               />
+              </Button>
+              
               
             </div>
           </Card.Body>

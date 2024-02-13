@@ -19,6 +19,7 @@ function App() {
       <hr className='mx-auto' style={{width:"80%",color:"#CFC8BD"}} />
       <InfoPage />
       <hr className='mx-auto' style={{width:"80%",color:"#CFC8BD"}} />
+      {/* done */}
       <Works />
       <Add />
       <BottomNav />
