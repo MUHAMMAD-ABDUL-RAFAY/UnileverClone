@@ -36,13 +36,13 @@ const TextPage = () => {
             <Typography style={{fontSize:"25px",color:"#000"}}>We believe in the power of food to enhance quality of life.</Typography>
             <br />
             <br />
-            <Typography style={{color:"#000"}}>This belief fuels our desire to use our global scale, resources and expertise to contribute to a healthier and sustainable future for people and the planet.</Typography>
+            <Typography style={{color:"grey"}}>This belief fuels our desire to use our global scale, resources and expertise to contribute to a healthier and sustainable future for people and the planet.</Typography>
             <br />
-            <Typography style={{color:"#000"}}>Creating Shared Value (CSV) is at the heart of our purpose: to unlock the power of food to enhance quality of life for everyone, today and for generations to come. We have sought to build our business by taking decisions that are not just good for us and our shareholders, but for society and the planet as well.</Typography>
+            <Typography style={{color:"grey"}}>Creating Shared Value (CSV) is at the heart of our purpose: to unlock the power of food to enhance quality of life for everyone, today and for generations to come. We have sought to build our business by taking decisions that are not just good for us and our shareholders, but for society and the planet as well.</Typography>
             <br />
-            <Typography style={{color:"#000"}}>Our work is guided by a desire to contribute to nutritious and sustainable diets, to help protect, renew and restore natural resources, to help strengthen communities and to operate responsibly.</Typography>
+            <Typography style={{color:"grey"}}>Our work is guided by a desire to contribute to nutritious and sustainable diets, to help protect, renew and restore natural resources, to help strengthen communities and to operate responsibly.</Typography>
             <br />
-            <Typography style={{color:"#000"}}>Our approach to sustainability is wide-ranging, underpinned by commitments to strive for net-zero emissions and deforestation-free supply chains and to advance regenerative agriculture at scale. Alongside, we are committed to improving water stewardship, developing better packaging with improved circularity, creating opportunities for young people and building a diverse and inclusive workforce.</Typography>
+            <Typography style={{color:"grey"}}>Our approach to sustainability is wide-ranging, underpinned by commitments to strive for net-zero emissions and deforestation-free supply chains and to advance regenerative agriculture at scale. Alongside, we are committed to improving water stewardship, developing better packaging with improved circularity, creating opportunities for young people and building a diverse and inclusive workforce.</Typography>
         </div>
     </div>
   )

@@ -85,7 +85,7 @@ const Works = () => {
               >
                 {heading}
               </Card.Title>
-              <Card.Text style={{ fontSize: "1rem",marginTop:"1rem" }}>
+              <Card.Text style={{ fontSize: "1rem",marginTop:"1rem",color:"grey" }}>
                 {cardHeadings[heading][1]}
               </Card.Text>
               <div className="flex items-center mt-4">

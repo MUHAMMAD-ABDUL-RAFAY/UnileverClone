@@ -51,7 +51,7 @@ const InfoPage = () => {
                 fontSize: "1.1rem",
                 marginBottom: "24px",
                 // #E8E5E2 in dark mode
-                color: "#000",
+                color: "grey",
               }}
             >
               At Colgate, we are making it our business to advance regenerative

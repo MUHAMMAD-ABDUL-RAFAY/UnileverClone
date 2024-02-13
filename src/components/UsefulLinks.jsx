@@ -13,8 +13,10 @@ const UsefulLinks = () => {
       style={{ marginLeft: "10%", marginRight: "10%" }}>
       <div style={{ width: (isSmallDevice || isMediumDevice) ? "85%" : "50%" }}>
         <div className={`flex flex-col gap-y-8 ${(isSmallDevice || isMediumDevice) ? "mb-12" : ""} `}>
-          <Typography style={{color:"#B5AE88",fontSize:"26px"}} >Colgate</Typography>
-          <Typography style={{color:"#E5E0D8",fontSize:"24px"}}>
+          {/* color #B5AE88 in dark mode */}
+          <Typography style={{color:"#000",fontSize:"26px"}} >Colgate</Typography>
+          {/* color #E5E0D8 in dark mode */}
+          <Typography style={{color:"grey",fontSize:"24px"}}>
             We unlock the power of food to enhance quality of life for everyone,
             today and for generations to come
           </Typography>
@@ -23,13 +25,16 @@ const UsefulLinks = () => {
       </div>
       <div style={{ width: (isSmallDevice || isMediumDevice) ? "85%" : "50%" }}>
         <div className="flex flex-col gap-y-4" style={{}}>
-            <hr style={{color:"#7D7B78"}} />
-            <Typography style={{color:"#B5AE88",fontSize:"16px",fontWeight:"400"}} >Useful Links</Typography>
-            <Typography style={{color:"#E5E0D8",fontSize:"0.875em",fontWeight:"200"}}>Ask Colgate (FAQs)</Typography>
-            <Typography style={{color:"#E5E0D8",fontSize:"0.875em",fontWeight:"200"}}>Contact us</Typography>
-            <Typography style={{color:"#E5E0D8",fontSize:"0.875em",fontWeight:"200"}}>Search for jobs</Typography>
-            <Typography style={{color:"#E5E0D8",fontSize:"0.875em",fontWeight:"200"}}>Sign up for news</Typography>
-            <Typography style={{color:"#E5E0D8",fontSize:"0.875em",fontWeight:"200"}}>Speak Up</Typography>
+          {/* color #7D7B78 */}
+            <hr style={{color:"grey"}} />
+            {/* color #B5AE88 */}
+            <Typography style={{color:"#000",fontSize:"16px",fontWeight:"400"}} >Useful Links</Typography>
+            {/* all colors #E5E0D8 */}
+            <Typography style={{color:"grey",fontSize:"0.875em",fontWeight:"200"}}>Ask Colgate (FAQs)</Typography>
+            <Typography style={{color:"grey",fontSize:"0.875em",fontWeight:"200"}}>Contact us</Typography>
+            <Typography style={{color:"grey",fontSize:"0.875em",fontWeight:"200"}}>Search for jobs</Typography>
+            <Typography style={{color:"grey",fontSize:"0.875em",fontWeight:"200"}}>Sign up for news</Typography>
+            <Typography style={{color:"grey",fontSize:"0.875em",fontWeight:"200"}}>Speak Up</Typography>
         </div>
       </div>
     </div>
