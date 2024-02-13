@@ -89,7 +89,7 @@ const Navbar = () => {
   };
   return (
     <div className="flex flex-col">
-      <div className="flex flex-row items-center md:mr-8 lg:mr-8" style={{placeContent:'flex-end'}}>
+      {/* <div className="flex flex-row items-center md:mr-8 lg:mr-8" style={{placeContent:'flex-end'}}>
         <div className={isSmallDevice ? "flex items-center" : "flex"}>
           <Typography className={isSmallDevice ? "" :"mr-1"} style={{ fontSize: "1em", color:"#B5AEA2"}} >Dark mode</Typography>
           <InfoIcon
@@ -126,7 +126,7 @@ const Navbar = () => {
             {isMediumDevice || isSmallDevice ? <MailOutlineIcon /> : "Contact Us"}
           </Button>
         </div>
-      </div>
+      </div> */}
 
       <div className="flex items-center justify-evenly mt-8 mx-8">
         <img src={logo} alt="logo" style={{ maxWidth: "363px" }} />
