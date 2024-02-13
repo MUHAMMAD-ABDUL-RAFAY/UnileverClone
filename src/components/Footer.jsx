@@ -11,31 +11,34 @@ const Footer = () => {
       className={`${
         isMediumDevice || isSmallDevice ? "flex justify-between gap-x-16" : ""
       }`}
-      style={{ backgroundColor: "#2A2C2C", padding: "1% 10%" }}
+      // background color #2A2C2C in dark mode
+      style={{ backgroundColor: "#EFEFEF", padding: "1% 10%" }}
     >
       <div
         className={`flex ${
           isMediumDevice || isSmallDevice ? "flex-col w-[50%] text-center" : ""
         } justify-evenly`}
-        style={{ color: "#CFC8BD" }}
+        // color #CFC8BD in dark mode
+        style={{ color: "#000" }}
       >
         <a style={{ marginBottom: isMediumDevice || isSmallDevice ? "0.2rem" : "" }}>
           {" "}
           <CopyrightIcon sx={{ fontSize: "15px" }} /> 2023 Colgate
         </a>
-        {isSmallDevice || isMediumDevice ? <hr /> : "|"}
+        {/* no color in hr tag in dark mode */}
+        {isSmallDevice || isMediumDevice ? <hr color="grey" /> : "|"}
         <a style={{ marginBottom: isMediumDevice || isSmallDevice ? "0.2rem" : "" }}>Site map</a>
-        {isSmallDevice || isMediumDevice ? <hr /> : "|"}
+        {isSmallDevice || isMediumDevice ? <hr color="grey" /> : "|"}
         <a style={{ marginBottom: isMediumDevice || isSmallDevice ? "0.2rem" : "" }}>Help</a>
-        {isSmallDevice || isMediumDevice ? <hr /> : "|"}
+        {isSmallDevice || isMediumDevice ? <hr color="grey" /> : "|"}
         <a style={{ marginBottom: isMediumDevice || isSmallDevice ? "0.2rem" : "" }}>Privacy</a>
-        {isSmallDevice || isMediumDevice ? <hr /> : "|"}
+        {isSmallDevice || isMediumDevice ? <hr color="grey" /> : "|"}
         <a style={{ marginBottom: isMediumDevice || isSmallDevice ? "0.2rem" : "" }}>Cookies</a>
-        {isSmallDevice || isMediumDevice ? <hr /> : "|"}
+        {isSmallDevice || isMediumDevice ? <hr color="grey" /> : "|"}
         <a style={{ marginBottom: isMediumDevice || isSmallDevice ? "0.2rem" : "" }}>
           Terms of use
         </a>
-        {isSmallDevice || isMediumDevice ? <hr /> : "|"}
+        {isSmallDevice || isMediumDevice ? <hr color="grey" /> : "|"}
         <a style={{ marginBottom: isMediumDevice || isSmallDevice ? "0.2rem" : "" }}>
           Accessibility
         </a>
@@ -44,28 +47,29 @@ const Footer = () => {
         className={`flex ${
           isMediumDevice || isSmallDevice ? "flex-col w-[50%] text-center" : ""
         } justify-evenly`}
-        style={{ color: "#CFC8BD" }}
+        // color #CFC8BD in dark mode
+        style={{ color: "#000" }}
       >
         <a style={{ marginBottom: isMediumDevice || isSmallDevice ? "0.2rem" : "" }}>
           Carbon efficiency
         </a>
-        {isSmallDevice || isMediumDevice ? <hr /> : "|"}
+        {isSmallDevice || isMediumDevice ? <hr color="grey" /> : "|"}
         <a style={{ marginBottom: isMediumDevice || isSmallDevice ? "0.2rem" : "" }}>
           Suppliers
         </a>
-        {isSmallDevice || isMediumDevice ? <hr /> : "|"}
+        {isSmallDevice || isMediumDevice ? <hr color="grey" /> : "|"}
         <a style={{ marginBottom: isMediumDevice || isSmallDevice ? "0.2rem" : "" }}>
           Social media
         </a>
-        {isSmallDevice || isMediumDevice ? <hr /> : "|"}
+        {isSmallDevice || isMediumDevice ? <hr color="grey" /> : "|"}
         <a style={{ marginBottom: isMediumDevice || isSmallDevice ? "0.2rem" : "" }}>RSS</a>
-        {isSmallDevice || isMediumDevice ? <hr /> : "|"}
+        {isSmallDevice || isMediumDevice ? <hr color="grey" /> : "|"}
         <a style={{ marginBottom: isMediumDevice || isSmallDevice ? "0.2rem" : "" }}>Sign up</a>
-        {isSmallDevice || isMediumDevice ? <hr /> : "|"}
+        {isSmallDevice || isMediumDevice ? <hr color="grey" /> : "|"}
         <a style={{ marginBottom: isMediumDevice || isSmallDevice ? "0.2rem" : "" }}>
           Unsubscribe
         </a>
-        {isSmallDevice || isMediumDevice ? <hr /> : "|"}
+        {isSmallDevice || isMediumDevice ? <hr color="grey" /> : "|"}
         <a style={{ marginBottom: isMediumDevice || isSmallDevice ? "0.2rem" : "" }}>
           Contact us
         </a>
