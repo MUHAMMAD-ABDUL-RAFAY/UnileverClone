@@ -10,7 +10,7 @@ const Works = () => {
       "We have put peak carbon behind us and aim to halve greenhouse gas emissions by 2030.",
     ],
     "Waste Reduction": [
-      "/wasteCard.jpg",
+      "/wasteCardwithBg.png",
       "Our ambition is a future where none of our packaging ends up in landfill or as litter.",
     ],
     "Protecting Nature": [

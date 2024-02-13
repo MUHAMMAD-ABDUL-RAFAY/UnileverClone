@@ -10,15 +10,17 @@ import UsefulLinks from './components/UsefulLinks'
 import Accord from './components/Accord'
 import Follow from './components/Follow'
 import Footer from './components/Footer'
-function App() {
+function App() {  
   return (
     <>
       <Navbar />
       <ImageDiv />
       <TextPage />
-      <hr className='mx-auto' style={{width:"80%",color:"#CFC8BD"}} />
+      {/* color #CFC8BD */}
+      <hr className='mx-auto' style={{width:"80%",color:"#CC0000"}} />
       <InfoPage />
-      <hr className='mx-auto' style={{width:"80%",color:"#CFC8BD"}} />
+      {/* color #CFC8BD */}
+      <hr className='mx-auto' style={{width:"80%",color:"#CC0000"}} />
       {/* done */}
       <Works />
       <Add />

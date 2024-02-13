@@ -10,9 +10,9 @@ const TextPage = () => {
     },[isSmallDevice,isMediumDevice])
     return (
     // color is #CFC8BD in dark mode whole file
-    <div className='mt-8 mb-16'>
-        { isSmallDevice || isMediumDevice ? "" : <div className='flex flex-col mb-4' style={{width:'90%',justifyContent:"flex-end"}}>
-            <div className='flex flex-col' style={{alignSelf:"flex-end",color:"#000"}}>
+    <div className={`mt-8 mb-16 ${isSmallDevice || isMediumDevice ? "flex flex-col-reverse" : ""}`}>
+        <div className='flex flex-col mb-4' style={{width: isSmallDevice || isMediumDevice ? "100%" : "90%",justifyContent:"flex-end"}}>
+            <div className={`flex flex-col ${isSmallDevice || isMediumDevice ? "mt-12" : ""}`} style={{alignSelf: isSmallDevice || isMediumDevice ? "center" : "flex-end",color:"#000"}}>
                 Share this page
                 <div className='flex flex-row gap-x-2 mt-2'>
                     {/* all background color #145170 */}
@@ -31,7 +31,7 @@ const TextPage = () => {
                     </div>
                 </div>
             </div>
-        </div>}
+        </div>
         <div className='flex flex-col' style={{width: isSmallDevice || isMediumDevice ? "80%" :"60%",justifyContent:"flex-start",marginLeft:"10%"}}>
             <Typography style={{fontSize:"25px",color:"#000"}}>We believe in the power of food to enhance quality of life.</Typography>
             <br />
