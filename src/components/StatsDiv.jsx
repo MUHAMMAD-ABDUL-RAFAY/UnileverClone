@@ -16,7 +16,7 @@ const StatsDiv = ({headingText,sign,bottomText}) => {
     // #292A2B backgroundColor #a9a093 color bordertopColor #2c809a in dark mode
     <div style={{borderTop:"2px solid #CC2439",color:"#000",backgroundColor:"#EFEFEF",minHeight:"152px",padding:"10px"}}>
         <Typography><span style={{fontSize:'60px',fontWeight:"700"}}>{headingText}</span> {containperc ? '' : <span style={{fontSize:"14px",fontWeight:"700"}} >{sign}</span>}</Typography>
-        <Typography>{bottomText}</Typography>
+        <Typography style={{color:"grey"}}>{bottomText}</Typography>
     </div>
   )
 }

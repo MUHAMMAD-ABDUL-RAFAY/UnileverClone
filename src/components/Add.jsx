@@ -12,9 +12,10 @@ const Add = () => {
     <div
       className="mt-16 mb-12"
       style={{
+        // backgroundColor: "#16696f",
         marginLeft: "10%",
         marginRight: "10%",
-        backgroundColor: "#16696F",
+        backgroundColor: "#CC0000",
         borderRadius: "1rem",
       }}
     >
@@ -34,13 +35,15 @@ const Add = () => {
             fontSize: "2rem",
             fontWeight: "200",
             lineHeight: "1.25",
-            color: "#D1CBC5",
+            // #D1CBC5 in dark mode
+            color: "#fff",
           }}
         >
           Creating Shared Value <br />
           and Sustainability Report
         </div>
-        <Button className={`${(isSmallDevice || isMediumDevice) ? "order-2" : ""}`} style={{ border: "1px solid #D1CBC5", color: "#D1CBC5" }}>
+        {/* #D1CBC5 in border and color in dark mode */}
+        <Button className={`${(isSmallDevice || isMediumDevice) ? "order-2" : ""}`} style={{ border: "1px solid #fff", color: "#fff" }}>
           Download <br /> the pdf <br />
           (15MB)
         </Button>
